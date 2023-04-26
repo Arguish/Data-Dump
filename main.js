@@ -42,14 +42,15 @@ async function dataDump(data) {
 
     const elementResult = {
       title: element.data.name,
-      description: element.data.overview,
-      season: element.data.number_of_season,
+      description: element.data.overview.slice(0, 200) + "...",
+      season: element.data.number_of_seasons,
       season_episodes: element.data.number_of_episodes,
       category:
         typeof element.data.genres[0] !== "undefined"
           ? element.data.genres[0].name
           : "Other",
       platform: randomPlatform(),
+      type: "show",
     };
     await fs.appendFileSync("./tv_series.json", JSON.stringify(elementResult));
     await fs.appendFileSync("./tv_series.json", ", \n");
