@@ -27,7 +27,9 @@ const moviesConfig = (page) => {
 const MFConfig = axios.create({
   //baseURL: 'http://localhost:3000/api',
 
-  baseURL: "https://mf-api.onrender.com/api",
+  //baseURL: "https://mf-api.onrender.com/api",
+
+  baseURL: "https://media-fast-app-production.up.railway.app/api",
   headers: {
     token:
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluYXRvckBhZG1pbmF0b3IiLCJpYXQiOjE2ODM0MDIzNzV9.7JoK0cvKcUm5Za65WEj9drKyJUOXCnba5TqeJEapF3g",
